@@ -1,0 +1,137 @@
+
+body{
+
+    background: rgb(174,225,238);
+    background: radial-gradient(circle, rgba(174,225,238,1) 0%, rgba(82,157,245,1) 89%);
+
+    color: white;
+    font-family: tahoma;
+}
+h1{
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+.container{
+    margin-top: 80px;
+    margin-left: 500px;
+    height: 410px;
+    width: 385px;
+    background-color: #35475F;
+    box-shadow: 7px 5px 70px black;
+    
+}
+
+.active{
+    border-style: none;
+    float: right;
+    margin: 30px 10px 0px 10px;
+    padding: 4px 10px;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    color: white;
+    box-shadow: 9px 4px 55px black;
+    background-color: #26B297;
+    height: auto;
+    width: auto;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+
+
+
+.clearfix{clear: both;}
+
+.g{
+    color: #ccc;
+    margin: 20px 0px 20px 40px;
+    font-size:18px;
+    margin-bottom: 45px;
+    cursor: pointer;
+
+}
+.ac{
+    color: white;
+    border-bottom: solid 2px #26B297;
+}
+.g span{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+    
+}
+
+lable{
+    margin-left: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input{
+    display: block;
+    padding: 5px;
+    margin-left: 35px;
+    margin-bottom: 10px;
+    width: 300px;
+    border-style: none;
+    border-bottom: solid 1px #ccc;
+    background-color: #35475F;
+    font-family: tahoma;
+    font-size: 15px;
+    color: #ccc;
+}
+
+.cb{
+    border-style: none;
+    color: #26B297;
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+    display: inline-block;
+    
+}
+
+.container p .tc{
+    font-size: 14px;
+    font-weight: 500px;
+    margin-top: -150px;
+    display: inline-block;
+    border-bottom: solid 2.5px #26B297;
+}
+.container .lp{
+    font-size: 14px;
+    font-weight: 500px;
+    margin-top: -150px;
+    display: inline-block;
+    
+}
+
+.llb{
+    display: block;
+    margin-top: 20px;
+    margin-left: 30%;
+    background-color: #26B297;
+    border-radius: 9px;
+    padding: 4px 10px;
+    height: 40px;;
+    width: 150px;
+    color: white;
+    border-style: none;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.llp{
+    display: inline-block;
+    margin-top: 35px;
+    margin-left: 10px;
+    font-size: 14px;
+    border-bottom: solid 2.5px #26B297; 
+    color: #ccc;
+    
+}

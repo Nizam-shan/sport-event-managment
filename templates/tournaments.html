@@ -1,0 +1,46 @@
+{% extends 'adminbase.html' %} 
+{% load static %} 
+{% block content %}
+
+<section class="home-section">
+  <nav>
+    <div class="sidebar-button">
+      <i class="bx bx-menu sidebarBtn"></i>
+      <span class="dashboard">Tournaments List</span>
+    </div>
+  </nav>
+
+  <div class="home-content">
+    <div class="container">
+      <table>
+          <thead>
+              <tr>
+                  <th>Tournament Host</th>
+                  <th>Event</th>
+                  <th>Gender</th>
+                  <th>Category</th>
+                  <th>Date</th>
+                  
+              </tr>
+          </thead>
+          <tbody>
+            {% for tournament in tournaments %}
+              <tr>
+                  <td>{{ tournament.college }}</td>
+                  <td>{{ tournament.event.name }}</td>
+                  <td>{{ tournament.category }}</td>
+                  <td>{{ tournament.level }}</td>
+                  <td>{{ tournament.date }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+      </table>
+  </div>
+
+  
+
+  </div>
+
+</section>
+
+{% endblock %}

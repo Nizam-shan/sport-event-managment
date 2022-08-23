@@ -1,0 +1,229 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="{% static 'CSS/index2.css'%}">
+  <link rel="icon" href="assets/images/runner.png">
+
+  <title>Home</title>
+  <!-- bootstrap links -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
+
+</head>
+
+<body>
+
+
+
+
+  <!-- topbar -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bgcol fixed-top ">
+    <div class="container-fluid p-3">
+      <a class="navbar-brand" href="{% url 'index' %}">
+        <i class="fas fa-bold "></i>.
+      </a>
+
+      <a class="navbar-brand  p-2" href="#"><span class="badge bg-light text-dark">S P O R T S E V E N T M A N A G E M E
+          N T</span> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse float-start" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" aria-current="page" href="{% url 'aboutus' %}">About Us</a>
+          </li>
+          
+          
+          <li class="nav-item">
+            <a class="nav-link text-white" aria-current="page" href="{% url 'gallery' %}">Gallery</a>
+          </li>
+
+
+
+
+
+        </ul>
+        <form class="d-flex " role="search">
+          <a href="{% url 'login' %}" class="btn btn-light btn-outline-info text-black">college login</a>
+        </form>
+
+
+
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Top Bar -->
+
+
+  <!-- Slider -->
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false" style="padding-top: 4em;">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner slid-er h-50">
+      <div class="carousel-item active">
+        <img src="{%static 'images/main 2.jpg' %}" class="d-block w-10" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="text-black ">THIRSTY THURSDAY</h2>
+          <p>BLOW YOUR MIND NOT ONLY MENTALLY BUT EVEN PHYSICALLY.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{%static 'images/main.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="text-white">THIRSTY THURSDAY</h2>
+          <p>THE MORE DIFFICULT THE VICTORY <br>THE GREATER THE HAPPINESS IN WINNING.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="{%static 'images/main 3.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="text-white">THIRSTY THURSDAY</h2>
+          <p>I Never Loose Either I Win Nor I Learn.</p>
+        </div>
+      </div>
+
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Event List -->
+  <section class="light">
+    <div class="container py-2">
+      <div class="h1 text-center text-black" id="pageHeaderTitle">Event Lists</div>
+
+      <article class="postcard light blue">
+        <a class="postcard__img_link" href=>
+          <img class="postcard__img" src="{%static 'images/mesronj.gif' %}" alt="Image Title" />
+        </a>
+        <div class="postcard__text t-dark">
+          <h1 class="postcard__title blue"><a href="">District level Football</a></h1>
+          <div class="postcard__subtitle small">
+            <time datetime="2020-05-25 12:00:00">
+              <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+            </time>
+          </div>
+          <div class="postcard__bar"></div>
+          <div class="postcard__preview-txt fst-italic">football, also called association football or soccer, game in which two teams of 11 players, using any part of their bodies except their hands and arms, try to maneuver the ball into the opposing team’s goal. Only the goalkeeper is permitted to handle the ball and may do so only within the penalty area surrounding the goal. The team that scores more goals wins.<br>Football is the world’s most popular ball game in numbers of participants and spectators. Simple in its principal rules and essential equipment, the sport can be played almost anywhere, from official football playing fields (pitches) to gymnasiums, streets, school playgrounds, parks, or beaches. Football’s governing body, the Fédération Internationale de Football Association (FIFA), estimated that at the turn of the 21st century there were approximately 250 million football players and over 1.3 billion people “interested” in football; in 2010 a combined television audience of more than 26 billion watched football’s premier tournament, the quadrennial month-long World Cup finals.</div>
+         
+          </a>
+        </div>
+      </article>
+
+      <article class="postcard light red">
+        <a class="postcard__img_link" href="#">
+          <img class="postcard__img" src="{%static 'images/cricket-crickets.gif' %}" alt="Image Title" />
+        </a>
+        <div class="postcard__text t-dark">
+          <h1 class="postcard__title red"><a>District level cricket</a></h1>
+
+          <div class="postcard__subtitle small">
+            <time datetime="2020-05-25 12:00:00">
+              <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+            </time>
+          </div>
+          <div class="postcard__bar"></div>
+          <div class="postcard__preview-txt fst-italic">Cricket is one of the most popular games not just in India but across the world. It is played between two teams consisting of a total of eleven players each. Watching others play cricket is as exciting as playing it.
+
+            You will find below a number of short and long paragraphs on Cricket. We hope these Cricket paragraphs will help students in completing their school assignments. These will also help children to write and read out paragraphs with simple words and small sentences. Students can select any paragraph on Cricket according to their particular requirement.</div>
+          
+        </div>
+      </article>
+
+      <article class="postcard light green">
+        <a class="postcard__img_link" href="#">
+          <img class="postcard__img" src="{%static 'images/volleyball3.gif' %}" alt="Image Title" />
+        </a>
+        <div class="postcard__text t-dark">
+          <h1 class="postcard__title green"><a>District level Vollyball</a></h1>
+          <div class="postcard__subtitle small">
+            <time datetime="2020-05-25 12:00:00">
+              <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+            </time>
+          </div>
+          <div class="postcard__bar"></div>
+          <div class="postcard__preview-txt fst-italic">There are many numbers of physical games that one would like to play and Volleyball is one among them. Volleyball is great game that is loaded with lots of energy and fun.
+
+            While some sports may have to be played using plenty number of equipments to play, volleyball, just needs to have a good ball and a net and could be played anywhere, where there is space, unlike other sports like basketball and golf which needs a specific area to play the game.To play volleyball, it is a team game and would have a total of twelve players, with six players on each side. The game begins when the captain of the game decides on which side of the court they play by tossing a coin. The key rule of the game is to keep the ball in the air and could be hit with any part of the body. A maximum of three hits are only possible on each team to get the ball to the other side.
+            
+            </div>
+          
+          </a>
+        </div>
+      </article>
+      <article class="postcard light yellow">
+        <a class="postcard__img_link" href="#">
+          <img class="postcard__img" src="{%static 'images/hockey-olympics.gif' %}" alt="Image Title" />
+        </a>
+        <div class="postcard__text t-dark">
+          <h1 class="postcard__title yellow"><a >District level Hockey</a></h1>
+          <div class="postcard__subtitle small">
+            <time datetime="2020-05-25 12:00:00">
+              <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+            </time>
+          </div>
+          <div class="postcard__bar"></div>
+          <div class="postcard__preview-txt fst-italic">Hockey is the national game of India. Also, it is a popular game and an interesting game that many countries play. The game has many rules that need to be followed by each team so that a fair play can be conducted. There are different varieties of this game played across the globe. But, the basic rules remain the same at all places. If we talk about India then the track record of India then it is quite good. Indian has won six gold medals in the Olympics and many consecutive matches.It is an ancient game that is played in India for years. Also, the game is always played with a stick and a ball. Before 1272 BC it was played in Ireland and during 600 BC ancient Greece used to play it. Around the world, there are many variations of the game known by the name ice hockey, field hockey, street hockey, sled hockey, and roller hockey.
+
+          </div>
+         
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+  <footer class="bgcol p-2">
+    <div class="container ">
+      <div class="row">
+        <div class="flex-column text-center">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram-square"></i>
+          <i class="fa-brands fa-whatsapp-square"></i>
+
+          <a href="{% url 'adminlogin' %}" class="btn btn-light btn-outline-info text-black float-lg-end">Admin
+            login</a>
+          <h2 class="text-center">Copyright</h2>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <!-- bootstrap... -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a32bfb1b02.js" crossorigin="anonymous"></script>
+
+</body>

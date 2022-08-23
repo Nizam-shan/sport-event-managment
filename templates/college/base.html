@@ -1,0 +1,69 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'CSS/db-college.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/viewtournament.css' %}">
+    
+
+    <title>College</title>
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- sidebar -->
+    <div class="sidebar">
+        <div class="logo-details">
+
+            <span class="logo_name">College</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="{% url 'home' %}" class="active">
+
+                    <span class="links_name">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'addtournament' %}">
+                    <span class="links_name">Add Tournament</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'tournament' %}">
+                    <span class="links_name">View Tournament</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'results' %}">
+                    <span class="links_name">Results</span>
+                </a>
+            </li>
+            <li class="log_out">
+                <a href="{% url 'logout' %}">
+                    <span class="links_name">Log out</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <!-- bootstrap... -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

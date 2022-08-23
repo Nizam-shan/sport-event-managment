@@ -1,0 +1,26 @@
+{% extends 'adminbase.html' %} 
+{% load static %} 
+{% block content %}
+
+<section class="home-section">
+  <nav>
+    <div class="sidebar-button">
+      <i class="bx bx-menu sidebarBtn"></i>
+      <span class="dashboard">Add Results</span>
+    </div>
+  </nav>
+
+  <div class="home-content">
+    <form action="{% url 'addwinner' %}" method="POST">
+      {% csrf_token %}
+      <div class="container w-75 p-3 mt-5">
+        <div class="row mb-4">
+          {{ form }}
+        </div>
+        <input type="submit" value="ADD NOW" class="btn btn-primary btn-lg btn-block w-100">
+      </div>
+    </form>
+  </div>
+</section>
+
+{% endblock %}

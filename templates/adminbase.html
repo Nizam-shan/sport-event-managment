@@ -1,0 +1,81 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{% static '/CSS/admindashboard.css' %}" />  
+
+    <title>Admin dashboard</title>
+    <!-- bootstrap links -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- sidebar -->
+    <div class="sidebar">
+      <div class="logo-details">
+        <span class="logo_name">Admin</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="{% url 'tournaments' %}">
+            <span class="links_name">Tournament List</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'addcollege' %}">
+            <span class="links_name">Add College</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'colleges' %}">
+            <span class="links_name">College List</span>
+          </a>
+        </li>
+ 
+        <li>
+          <a href="{% url 'addevents' %}">
+            <span class="links_name">Add Events</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'addwinner' %}">
+            <span class="links_name">Add Winner</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="{% url 'adminlogout' %}">
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    {% block content %}
+
+
+
+    {% endblock %}
+    <section class="home-section">
+      <nav>
+        <div class="sidebar-button">
+          <i class="bx bx-menu sidebarBtn"></i>
+          <span class="dashboard">Dashboard</span>
+        </div>
+      </nav>
+
+      <div class="home-content"></div>
+    </section>
+
+    <!-- bootstrap... -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+{% extends 'adminbase.html' %} 
+{% load static %} 
+{% block content %}
+
+<section class="home-section">
+  <nav>
+    <div class="sidebar-button">
+      <i class="bx bx-menu sidebarBtn"></i>
+      <span class="dashboard">Add College</span>
+    </div>
+  </nav>
+
+  <div class="home-content">
+    <form action="{% url 'addcollege' %}" method="POST">
+      {% csrf_token %}
+      <!-- 2 column grid layout with text inputs for the first and last names -->
+      <div class="container w-75 p-3 mt-5">
+        <div class="row mb-4">
+          <h1>Add College</h1>
+          <div class="col">
+            <div class="form-outline">
+              <input name="name" type="text" id="form3Example1" class="form-control" />
+              <label class="form-label" for="form3Example1">user name</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-outline">
+              <input name="email" type="email" id="form3Example1" class="form-control" />
+              <label class="form-label" for="form3Example1">College Email</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-outline">
+              <input name="password" type="password" id="form3Example1" class="form-control" />
+              <label class="form-label" for="form3Example1">Password</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-outline">
+              <input name="password2" type="password" id="form3Example1" class="form-control" />
+              <label class="form-label" for="form3Example1">Confirm Password</label>
+            </div>
+          </div>
+        </div>
+        <input type="submit" value="ADD NOW" class="btn btn-primary btn-lg btn-block w-100">
+      </div>
+    </form>
+  </div>
+</section>
+
+{% endblock %}

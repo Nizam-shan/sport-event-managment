@@ -1,0 +1,38 @@
+{% extends 'college/base.html' %}
+{% block content %}
+
+<section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Tournaments</span>
+      </div>
+    </nav>
+
+    <div class="home-content">
+     
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Winner</th>
+                        <th>Events</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for results in results %}
+                    <tr>
+                        <td>{{ results.winner }}</td>
+                        <td>{{ results.tournament }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+
+
+    </div>
+  </section>
+
+{% endblock %}

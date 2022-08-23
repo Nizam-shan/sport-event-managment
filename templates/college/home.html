@@ -1,0 +1,51 @@
+{% extends 'college/base.html' %} 
+{% block content %}
+
+    <section class="home-section">
+        <nav>
+          <div class="sidebar-button">
+            <i class='bx bx-menu sidebarBtn'></i>
+            <span class="dashboard">Applied Tournaments</span>
+          </div>
+        </nav>
+    
+        <div class="home-content ">
+         
+            <div class="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>College Name</th>
+                            <th>Events</th>
+                            <th>Date</th>
+                            <th>Gender</th>
+                            <th>No Of Team</th>
+                            <th>Level</th>
+                      
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for tournamentapply in tournamentapply %}
+                        <tr>
+                            <td>{{ tournamentapply.college }}</td>
+                            <td>{{ tournamentapply.tournament }}</td>
+                            <td>{{ tournamentapply.tournament.date }}</td>
+                            <td>{{ tournamentapply.tournament.category }}</td>
+                            <td>{{ tournamentapply.tournament.event.players }}</td>
+                            <td>{{ tournamentapply.tournament.level }}</td>
+                        
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+    
+    
+    
+        </div>
+      </section>
+    
+
+    {% endblock %}
+
+
